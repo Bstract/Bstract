@@ -1,5 +1,55 @@
 .site-header {
   border-bottom: $border;
   margin-bottom: 1rem;
-  padding: 1rem;
+  padding: 1.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-header > div {
+  flex: 0 1 32%;
+}
+.brand {
+  img {
+    max-height: 2rem;
+    margin: 0;
+  }
+  .light-mode-logo {
+
+  }
+  .dark-mode-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 1.5rem;
+    z-index: 5;
+  }
+}
+
+.lightswitch-wrapper {
+  text-align: center;
+  i {
+    padding: 5px;
+    font-size: 1.2rem;
+    align-items: baseline;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.header-links {
+  text-align: right;
+  li {
+    margin-bottom: 0;
+    margin-left: 1rem;
+  }
+  a {
+    text-decoration: none;
+    padding: 5px;
+    font-size: 1.125rem;
+  }
+  i {
+    font-size: 1.25rem;
+  }
 }

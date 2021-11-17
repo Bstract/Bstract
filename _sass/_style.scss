@@ -1,6 +1,13 @@
 .container {
   margin: 1rem auto;
-  padding: 1rem;
+  padding: 1.5rem;
+}
+.light-mode {
+  background: #fff;
+  color: $dark-grey;
+  a {
+    color: $dark-grey;
+  }
 }
 #ice-dance-collection {
   @extend .small;

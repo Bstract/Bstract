@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,800;1,400&family=Source+Code+Pro&display=swap");
 * { box-sizing: border-box; }
 
 html, body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure { margin: 0; padding: 0; }
@@ -7,7 +7,7 @@ html, body { font-size: 16px; min-height: 95vh; }
 
 html { position: relative; }
 
-body { font-family: "Source Code Pro", -apple-system, Helvetica, Arial, sans-serif, apple color emoji; font-weight: normal; color: #4a4a4a; -webkit-text-size-adjust: 100%; -webkit-font-feature-settings: "kern" 1; -moz-font-feature-settings: "kern" 1; -o-font-feature-settings: "kern" 1; font-feature-settings: "kern" 1; font-kerning: normal; }
+body { font-family: "Source Code Pro", -apple-system, Helvetica, Arial, sans-serif, apple color emoji; font-weight: normal; color: #eaecea; background-color: #131513; background: linear-gradient(-45deg, #051635 0%, #131513 27%, #2d193a 100%); -webkit-text-size-adjust: 100%; -webkit-font-feature-settings: "kern" 1; -moz-font-feature-settings: "kern" 1; -o-font-feature-settings: "kern" 1; font-feature-settings: "kern" 1; font-kerning: normal; }
 
 section { padding-top: 2rem; padding-bottom: 2rem; }
 
@@ -15,7 +15,7 @@ p, blockquote { font-size: 16px; line-height: 1.7; margin-bottom: 1rem; max-widt
 
 @media (min-width: 650px) { p, blockquote { font-size: 16px; } }
 
-h1, h2, h3, h4, h5, h6 { font-family: "Source Code Pro", -apple-system, Helvetica, Arial, sans-serif, apple color emoji; font-weight: normal; margin-bottom: 1em; color: #24272d; }
+h1, h2, h3, h4, h5, h6 { font-family: "Source Code Pro", -apple-system, Helvetica, Arial, sans-serif, apple color emoji; font-weight: normal; margin-bottom: 1em; color: #131513; }
 
 h1 { font-size: 1.625rem; }
 
@@ -29,7 +29,7 @@ h3 { font-size: 1.125rem; }
 
 @media (min-width: 650px) { h3 { font-size: 1.3125rem; } }
 
-a { text-decoration: underline; transition: 0.4s ease; }
+a { color: #eaecea; text-decoration: underline; transition: 0.4s ease; }
 
 a:hover { text-decoration: underline; }
 
@@ -71,11 +71,35 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 .list-inline li, #ice-dance-collection li { display: inline-block; }
 
-.container { margin: 1rem auto; padding: 1rem; }
+.container { margin: 1rem auto; padding: 1.5rem; }
+
+.light-mode { background: #fff; color: #131513; }
+
+.light-mode a { color: #131513; }
 
 #ice-dance-collection img { max-width: 200px; margin-right: 1rem; }
 
-.site-header { border-bottom: 1px solid #e7e7e7; margin-bottom: 1rem; padding: 1rem; }
+.site-header { border-bottom: 1px solid #e7e7e7; margin-bottom: 1rem; padding: 1.5rem; position: relative; display: flex; align-items: center; justify-content: space-between; }
+
+.site-header > div { flex: 0 1 32%; }
+
+.brand img { max-height: 2rem; margin: 0; }
+
+.brand .dark-mode-logo { position: absolute; top: 0; left: 0; margin: 1.5rem; z-index: 5; }
+
+.lightswitch-wrapper { text-align: center; }
+
+.lightswitch-wrapper i { padding: 5px; font-size: 1.2rem; align-items: baseline; }
+
+.lightswitch-wrapper i:hover { cursor: pointer; }
+
+.header-links { text-align: right; }
+
+.header-links li { margin-bottom: 0; margin-left: 1rem; }
+
+.header-links a { text-decoration: none; padding: 5px; font-size: 1.125rem; }
+
+.header-links i { font-size: 1.25rem; }
 
 .site-footer { padding: 1rem; border-top: 1px solid #e7e7e7; }
 
