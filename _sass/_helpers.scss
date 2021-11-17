@@ -1,0 +1,26 @@
+// =======================================
+//  Global helpers
+// =======================================
+.phones-only {
+  @include for-tablet-portrait-up {
+    display: none;
+  };
+}
+.small {
+  font-size: $small;
+}
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.list-inline {
+  list-style: none;
+  li {
+    display: inline-block;
+  }
+}

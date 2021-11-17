@@ -1,0 +1,12 @@
+.container {
+  margin: 1rem auto;
+  padding: 1rem;
+}
+#ice-dance-collection {
+  @extend .small;
+  @extend .list-inline;
+  img {
+    max-width: 200px;
+    margin-right: 1rem;
+  }
+}
