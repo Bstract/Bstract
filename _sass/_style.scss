@@ -1,40 +1,9 @@
-.container {
-  margin: 1rem auto;
-  padding: 1.5rem;
-  max-width: $column-width;
+.hero {
+  padding: 3rem 0;
 }
-.button {
-  color: $text-color;
-  text-decoration: none;
-  background: #124a7e;
-  padding: 5px 8px;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  &:hover {
-    text-decoration: none;
-    border-color: darken(#f2e9ff, 15%);
-  }
-}
-.icon-button {
-  padding-right: 3px;
-  .icon-wrapper {
-    display: inline-block;
-    width: 2em;
-    text-align: left;
-    i {
-      margin-left: 8px;
-      transition: 0.4s ease;
-    }
-  }
-  &:hover {
-    text-decoration: none;
-    border-color: darken(#f2e9ff, 15%);
-    .icon-wrapper {
-      i {
-        margin-left: 11px;
-      }
-    }
-  }
+.lead {
+  font-size: 1.5rem;
+  max-width: 100%;
 }
 #ice-dance-collection {
   display: flex;
@@ -51,9 +20,11 @@
     margin-bottom: 2rem;
     @include for-tablet-portrait-up {
       flex: 0 1 48%;
+      margin-bottom: 3rem;
     };
     @include for-tablet-landscape-up {
-      flex: 0 1 23%;
+      flex: 0 1 22.5%;
+      margin-bottom: 4rem;
     };
   }
   img {

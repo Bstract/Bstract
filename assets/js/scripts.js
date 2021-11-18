@@ -35,4 +35,12 @@ jQuery(document).ready(function($){
     $('body').toggleClass('light-mode');
   });
 
+  // Open the menu – thanks Jonathon Suh
+  var $hamburger = $('.hamburger');
+  $hamburger.on("click", function(){
+    $hamburger.toggleClass("is-active");
+    $('.nav-container').toggleClass("menu-open");
+  });
+
+
 });
