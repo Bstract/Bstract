@@ -1,0 +1,41 @@
+.container {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: $column-width;
+  @include for-tablet-landscape-up {
+    padding: 1.5rem;
+  };
+}
+.button {
+  color: $text-color;
+  text-decoration: none;
+  background: #124a7e;
+  padding: 5px 8px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  &:hover {
+    text-decoration: none;
+    border-color: darken(#f2e9ff, 15%);
+  }
+}
+.icon-button {
+  padding-right: 3px;
+  .icon-wrapper {
+    display: inline-block;
+    width: 2em;
+    text-align: left;
+    i {
+      margin-left: 8px;
+      transition: 0.4s ease;
+    }
+  }
+  &:hover {
+    text-decoration: none;
+    border-color: darken(#f2e9ff, 15%);
+    .icon-wrapper {
+      i {
+        margin-left: 11px;
+      }
+    }
+  }
+}

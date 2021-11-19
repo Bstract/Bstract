@@ -4,13 +4,13 @@
 @charset "utf-8";
 
 // Layout
-$column-width:          980px; // Middle column width
+$column-width:          1200px; // Middle column width
 $paragraph-width:       560px; // Max width of a paragraph at 15px to give 80 cpl.
 
 // Typography
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,800;1,400&family=Source+Code+Pro&display=swap');
 $base-font-size:        16px;
-$base-font-family:      'Source Code Pro', -apple-system,Helvetica,Arial,sans-serif,apple color emoji;
+$base-font-family:      'Montserrat', -apple-system,Helvetica,Arial,sans-serif,apple color emoji;
 $base-font-weight:      normal;
 $headings-font-family:  $base-font-family;
 $headings-font-weight:  $base-font-weight;
@@ -24,7 +24,7 @@ $second-color:          $brand-color; // Not used
 $light-grey:            #e7e7e7; // Borders, lines
 $soft-grey:             #9da5b4; // Text on dark backgrounds
 $dark-grey:             #131513; // For dark backgrounds and text
-$background:            linear-gradient(-45deg, rgba(5,22,53,1) 0%, rgba(19,21,19,1) 27%, rgba(45,25,58,1) 100%);
+$background:            linear-gradient(to right, rgba(5,22,53,1) 0%, rgba(45,25,58,1) 100%);
                         // Midnight (#051635) -> Opal black (#131513) -> blackcurrent (#2d193a)
 
 // Other stuff
@@ -35,8 +35,10 @@ $spacing-unit:          2rem;
   "breakpoints",
   "base",
   "helpers",
+  "components",
   "style",
   "header",
   "footer",
-  "post"
+  "post",
+  "lightmode"
 ;
