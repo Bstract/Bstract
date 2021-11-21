@@ -17,10 +17,10 @@
     padding: 1.5rem;
   };
   img {
-    max-height: 1.5rem;
+    max-height: 1.2rem;
     margin: 0;
     @include for-tablet-landscape-up {
-      max-height: 2rem;
+      max-height: 1.75rem;
     };
   }
   .dark-mode-logo {
@@ -43,7 +43,7 @@
   flex: 0 0 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: flex-end;
   flex-wrap: wrap;
   max-height: 0;
   overflow: hidden;
@@ -57,36 +57,13 @@
 .menu-open {
   max-height: 500px;
 }
-.lightswitch-wrapper, .header-links {
+.header-links {
+  text-align: right;
+  padding: 0 1rem;
   flex: 0 0 100%;
   @include for-tablet-landscape-up {
     flex: 0 2 50%;
   };
-}
-.lightswitch-wrapper {
-  text-align: left;
-  font-family: 'Source Code Pro', $base-font-family;
-  padding: 1rem 0 1.5rem 1rem;
-  border-top: $border;
-  border-bottom: $border;
-  @include for-tablet-landscape-up {
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    border: 0;
-  };
-  i {
-    padding: 5px;
-    font-size: 1.2rem;
-    align-items: baseline;
-    &:hover {
-      cursor: pointer;
-    }
-  }
-}
-.header-links {
-  text-align: right;
-  padding: 0 1rem;
   ul {
     list-style-type: none;
     padding: 1rem 0;

@@ -72,11 +72,11 @@ h3 {
   };
 }
 a {
-  color: $text-color;
-  text-decoration: underline;
+  color: $link-color;
+  text-decoration: underline dotted;
   transition: 0.4s ease;
   &:hover {
-    text-decoration: underline;
+    text-decoration: underline wavy;
   }
 }
 li, dd, dt {

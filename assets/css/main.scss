@@ -4,19 +4,20 @@
 @charset "utf-8";
 
 // Layout
-$column-width:          1200px; // Middle column width
-$paragraph-width:       560px; // Max width of a paragraph at 15px to give 80 cpl.
+$column-width:          1200px; // Column width
+$paragraph-width:       620px; // Max width of a paragraph ~80 cpl.
 
 // Typography
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,800;1,400&family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
 $base-font-size:        16px;
-$base-font-family:      'Montserrat', -apple-system,Helvetica,Arial,sans-serif,apple color emoji;
+$base-font-family:      'Lora', -apple-system,Helvetica,Arial,sans-serif,apple color emoji;
 $base-font-weight:      normal;
 $headings-font-family:  $base-font-family;
 $headings-font-weight:  $base-font-weight;
-$monospace-font-family: 'Source Code Pro', 'Courier', monospace;
+$monospace-font-family: $base-font-family;
 $small:                 $base-font-size * 0.875;
-$text-color:            #eaecea;
+$text-color:            #051635; // Blackcurrent
+$link-color:            #2d193a; // Midnight
 
 // Colours
 $brand-color:           #03375E; // French navy
@@ -24,8 +25,7 @@ $second-color:          $brand-color; // Not used
 $light-grey:            #e7e7e7; // Borders, lines
 $soft-grey:             #9da5b4; // Text on dark backgrounds
 $dark-grey:             #131513; // For dark backgrounds and text
-$background:            linear-gradient(to right, rgba(5,22,53,1) 0%, rgba(45,25,58,1) 100%);
-                        // Midnight (#051635) -> Opal black (#131513) -> blackcurrent (#2d193a)
+$background:            #f5f7f6;
 
 // Other stuff
 $border:                1px solid $light-grey;
