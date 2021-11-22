@@ -23,7 +23,7 @@ body {
   font-weight: $base-font-weight;
   color: $text-color;
   background-color: $dark-grey;
-  background: $background;
+  // background: $background;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -33,8 +33,8 @@ body {
 }
 
 section {
-  padding-top: $spacing-unit;
-  padding-bottom: $spacing-unit;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 p {
@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $headings-font-family;
   font-weight: $headings-font-weight;
   margin-bottom: 1em;
-  color: $dark-grey;
+  color: #000;
 }
 h1 {
   font-size: 1.625rem;
@@ -60,9 +60,9 @@ h1 {
   };
 }
 h2 {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   @include for-tablet-portrait-up {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   };
 }
 h3 {

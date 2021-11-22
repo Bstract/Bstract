@@ -8,16 +8,16 @@ $column-width:          1200px; // Column width
 $paragraph-width:       620px; // Max width of a paragraph ~80 cpl.
 
 // Typography
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
 $base-font-size:        16px;
-$base-font-family:      'Lora', -apple-system,Helvetica,Arial,sans-serif,apple color emoji;
+$base-font-family:      'Inter', -apple-system,Helvetica,Arial,sans-serif,apple color emoji;
 $base-font-weight:      normal;
-$headings-font-family:  $base-font-family;
-$headings-font-weight:  $base-font-weight;
+$headings-font-family:  'Lora', $base-font-family;
+$headings-font-weight:  700;
 $monospace-font-family: $base-font-family;
 $small:                 $base-font-size * 0.875;
-$text-color:            #051635; // Blackcurrent
-$link-color:            #2d193a; // Midnight
+$text-color:            #444340;
+$link-color:            #2d193a; // Blackcurrent?
 
 // Colours
 $brand-color:           #03375E; // French navy
@@ -25,7 +25,7 @@ $second-color:          $brand-color; // Not used
 $light-grey:            #e7e7e7; // Borders, lines
 $soft-grey:             #9da5b4; // Text on dark backgrounds
 $dark-grey:             #131513; // For dark backgrounds and text
-$background:            #f5f7f6;
+$background:            linear-gradient(to bottom, #faf4f2, #f5f7f6);
 
 // Other stuff
 $border:                1px solid $light-grey;
@@ -39,6 +39,5 @@ $spacing-unit:          2rem;
   "style",
   "header",
   "footer",
-  "post",
-  "lightmode"
+  "post"
 ;

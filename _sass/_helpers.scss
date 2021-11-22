@@ -6,8 +6,15 @@
     display: none;
   };
 }
+.flex {
+  display: flex;
+}
 .small {
   font-size: $small;
+}
+.lead {
+  font-size: 1.5rem;
+  max-width: 100%;
 }
 .text-left {
   text-align: left;

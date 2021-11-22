@@ -1,5 +1,5 @@
 .site-header {
-  border-bottom: $border;
+  // border-bottom: 1px solid #fff;
   position: relative;
   display: flex;
   align-items: center;
@@ -13,30 +13,26 @@
   justify-content: space-between;
   padding: 1.5rem 1rem;
   @include for-tablet-landscape-up {
-    flex: 0 1 33%;
+    // flex: 0 1 33%;
     padding: 1.5rem;
   };
   img {
-    max-height: 1.2rem;
+    max-height: 1.75rem;
     margin: 0;
     @include for-tablet-landscape-up {
-      max-height: 1.75rem;
-    };
-  }
-  .dark-mode-logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 1.5rem 1rem;
-    z-index: 5;
-    @include for-tablet-landscape-up {
-      margin: 1.5rem;
+      max-height: 2rem;
     };
   }
   .menu-toggle {
-    @include for-tablet-landscape-up {
-      display: none;
-    };
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid transparent;
+    font-family: $base-font-family;
+    font-size: 1rem;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 .nav-container {
@@ -48,9 +44,10 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease;
+
   @include for-tablet-landscape-up {
-    flex: 0 1 67%;
-    max-height: 100px;
+    //flex: 0 1 67%;
+    //max-height: 100px;
     flex-wrap: nowrap;
   };
 }
@@ -61,6 +58,7 @@
   text-align: right;
   padding: 0 1rem;
   flex: 0 0 100%;
+  border-bottom: 1px solid #fff;
   @include for-tablet-landscape-up {
     flex: 0 2 50%;
   };
@@ -116,7 +114,7 @@
   text-transform: none;
   background-color: transparent;
   border: 0;
-  margin: 0;
+  margin-left: 10px;
   overflow: visible; }
   .hamburger:hover {
     opacity: 0.7; }
@@ -132,7 +130,7 @@
 
 .hamburger-box {
   width: 35px;
-  // height: 22px;
+  height: 28px;
   display: block;
   position: relative; }
 
