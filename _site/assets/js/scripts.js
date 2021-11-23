@@ -16,7 +16,7 @@ jQuery(document).ready(function($){
                 '<div class="img-wrapper">' +
                   '<img src="' + item.image_url + '" alt="@Bstract artwork on OpenSea" />' +
                 '</div>' +
-                '<div class="card-info">' +
+                '<div class="card-info card-info-sticky">' +
                   '<h2>' + item.name + '</h2>' +
                   '<p>Available on OpenSea</p>' +
                 '</div>' +
@@ -38,7 +38,7 @@ jQuery(document).ready(function($){
             '</li>'
           );
           // Limit number of pieces listed
-          return i<8;
+          return i<9;
         }
 
 
@@ -56,7 +56,7 @@ jQuery(document).ready(function($){
   $('.smooth-scroll').on("click", function(){
     $('html, body').animate({
       scrollTop: $($(this).attr('href')).offset().top
-    }, 800);
+    }, 1000);
     return false;
   });
 

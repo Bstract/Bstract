@@ -19,7 +19,7 @@
     letter-spacing: -1px;
     line-height: 1.2;
     width: 100%;
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
     span {
       font-size: 2rem;
       font-weight: 400;
@@ -129,6 +129,7 @@
   .collection-intro {
     position: sticky;
     top: 5rem;
+    padding-bottom: 1rem;
     .subheading {
       text-transform: uppercase;
       font-size: 0.875rem;
@@ -176,6 +177,10 @@
     padding: 1rem;
     background: #fff;
   }
+  .card-info-sticky {
+    position: sticky;
+    top: 80px;
+  }
   h2 {
     color: $text-color;
     font-size: 1rem;
@@ -188,6 +193,91 @@
     // text-transform: uppercase;
     margin-bottom: 0;
     text-align: center;
+  }
+}
+
+.collection-gallery {
+  padding-top: 3rem;
+  .works-list {
+    align-items: flex-start;
+    li {
+      @include for-tablet-portrait-up {
+        flex: 0 1 48%;
+      };
+    }
+    a {
+      align-items: flex-start;
+    }
+    li:nth-child(2) {
+      @include for-tablet-portrait-up {
+        margin-top: 10rem;
+        margin-bottom: 6rem;
+      };
+    }
+    li:nth-child(3), li:nth-child(4), li:nth-child(5) {
+      @include for-tablet-portrait-up {
+        flex: 0 1 32%;
+        .card-info {
+          flex: 0 0 120px;
+          padding: 12px 8px;
+        }
+        h2 {
+          font-size: 0.8rem;
+          margin-bottom: 8px;
+        }
+        p {
+          font-size: 0.5rem;
+        }
+      };
+    }
+    li:nth-child(3) {
+      @include for-tablet-portrait-up {
+        margin-top: 130px;
+      };
+      a {
+        align-items: flex-end;
+        flex-direction: row-reverse;
+        img {
+          margin-right: 0;
+          margin-left: 10px;
+        }
+      }
+    }
+    li:nth-child(4), li:nth-child(5) {
+      a {
+        flex-wrap: wrap;
+        .img-wrapper {
+          flex: 0 0 100%;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    li:nth-child(5) {
+      @include for-tablet-portrait-up {
+        margin-top: 130px;
+        margin-bottom: 6rem;
+        a {
+          justify-content: flex-end;
+          img {
+            margin-left: 10px;
+            margin-right: 0;
+          }
+        }
+      };
+    }
+    li:nth-child(7) {
+      @include for-tablet-portrait-up {
+        // margin-top: 130px;
+      };
+      a {
+        align-items: flex-end;
+        flex-direction: row-reverse;
+        img {
+          margin-right: 0;
+          margin-left: 10px;
+        }
+      }
+    }
   }
 }
 
@@ -204,7 +294,7 @@
 
 #theoriginals {
   background-color: #fff;
-  background: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.85)), url('/assets/img/bgs/bg1.jpeg');
+  background: linear-gradient(#fde7ea, #f1f1f9);
   background-size: cover;
 }
 #originals-list-1 {
@@ -222,9 +312,39 @@
 }
 
 #theoneoffs {
-  background: #e5e1f1;
+  background-color: #fff;
+  background: linear-gradient(#fde7ea, rgba(251,233,227,1));
+  background-size: cover;
+  .collection-content {
+    padding-left: 0;
+    padding-right: 4rem;
+  }
+  li {
+    margin-bottom: 4rem;
+  }
+  li:nth-child(n+2) > a {
+    align-items: flex-start;
+  }
 }
 
 #thecollabs {
-  background: #C4EFF6;
+  background: #d3f0f5;
+  background: linear-gradient(#d3f0f5, rgba(251,233,227,1));
+  .collection {
+    flex-wrap: wrap;
+  }
+  .collection-intro-wrapper {
+    text-align: center;
+    flex: 0 0 100%;
+    p {
+      margin: auto;
+    }
+  }
+  .collection-content {
+    padding-left: 0;
+    margin: 0 auto;
+  }
+  .gallery-wall {
+    padding-top: 4rem;
+  }
 }
