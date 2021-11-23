@@ -9,18 +9,39 @@ jQuery(document).ready(function($){
   fetch('/assets/js/dev.json', options)
     .then(response => response.json())
     .then(response => $.each(response.assets, function(i, item) {
-        $('#ice-dance-collection').append(
-          '<li>' +
-            '<a href="' + item.permalink + '" target="_blank">' +
-              '<img src="' + item.image_url + '" alt="@Bstract artwork on OpenSea" />' +
-              '<div class="card-info">' +
-                '<h2>' + item.name + '</h2>' +
-              '</div>' +
-            '</a>' +
-          '</li>'
-        );
-        // Limit number of pieces listed
-        return i<11;
+        if ( i < 3) {
+          $('#originals-list-1').append(
+            '<li>' +
+              '<a href="' + item.permalink + '" target="_blank">' +
+                '<div class="img-wrapper">' +
+                  '<img src="' + item.image_url + '" alt="@Bstract artwork on OpenSea" />' +
+                '</div>' +
+                '<div class="card-info">' +
+                  '<h2>' + item.name + '</h2>' +
+                  '<p>Available on OpenSea</p>' +
+                '</div>' +
+              '</a>' +
+            '</li>'
+          );
+        } else {
+          $('#originals-list-2').append(
+            '<li>' +
+              '<a href="' + item.permalink + '" target="_blank">' +
+                '<div class="img-wrapper">' +
+                  '<img src="' + item.image_url + '" alt="@Bstract artwork on OpenSea" />' +
+                '</div>' +
+                '<div class="card-info">' +
+                  '<h2>' + item.name + '</h2>' +
+                  '<p>Available on OpenSea</p>' +
+                '</div>' +
+              '</a>' +
+            '</li>'
+          );
+          // Limit number of pieces listed
+          return i<8;
+        }
+
+
     }))
     .catch(err => console.error(err));
 
@@ -29,6 +50,14 @@ jQuery(document).ready(function($){
   $('.menu-toggle').on("click", function(){
     $hamburger.toggleClass("is-active");
     $('.nav-container').toggleClass("menu-open");
+  });
+
+  // Smoooooth scrolling
+  $('.smooth-scroll').on("click", function(){
+    $('html, body').animate({
+      scrollTop: $($(this).attr('href')).offset().top
+    }, 800);
+    return false;
   });
 
 

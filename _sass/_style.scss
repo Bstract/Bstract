@@ -8,8 +8,11 @@
   z-index: -5;
 }
 .hero {
-  padding: 1rem 0 2rem;
   text-align: center;
+  padding: 0 0 3rem 0;
+  @include for-tablet-portrait-up {
+    padding-bottom: 5rem;
+  };
   h1 {
     font-size: 3.25rem;
     font-weight: 700;
@@ -20,6 +23,13 @@
     span {
       font-size: 2rem;
       font-weight: 400;
+    }
+  }
+  a {
+    text-decoration: none;
+    transition: 0.4s ease;
+    &:hover {
+      text-decoration: underline wavy;
     }
   }
 }
@@ -110,84 +120,111 @@
   flex-wrap: wrap;
   align-items: stretch;
   justify-content: space-between;
-  .collection-intro {
+  .collection-intro-wrapper {
     flex: 0 0 100%;
     @include for-tablet-landscape-up {
-      flex: 0 1 30%;
+      flex: 0 1 37%;
     };
   }
-  .collection-intro-inner {
+  .collection-intro {
     position: sticky;
-    top: 100px;
+    top: 5rem;
+    .subheading {
+      text-transform: uppercase;
+      font-size: 0.875rem;
+      letter-spacing: 1px;
+      margin-bottom: 0;
+    }
   }
   .collection-content {
     flex: 0 0 100%;
     @include for-tablet-landscape-up {
-      flex: 0 1 65%;
+      flex: 0 1 62%;
+      padding-left: 5rem;
     };
   }
 }
-#ice-dance-collection {
+.works-list {
   display: flex;
-  align-items: stretch;
+  align-items: flex-end;
   justify-content: space-between;
   flex-wrap: wrap;
   list-style-type: none;
   li {
     flex: 0 1 100%;
     border-radius: 2px;
-    margin-bottom: 2rem;
-    @include for-tablet-portrait-up {
-      flex: 0 1 48%;
-    };
-    @include for-tablet-landscape-up {
-      flex: 0 1 32%;
-    };
+    margin-bottom: 4rem;
   }
   a {
-    display: block;
-    padding: 10px;
-    background: #fbe9e3;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
     text-decoration: none;
   }
+  .img-wrapper {
+    max-width: 448px;
+    flex: 0 2 448px;
+    margin: 0 10px 0 0;
+  }
   img {
-    width: 100%;
+    max-width: 100%;
+    min-width: 0;
     margin: 0;
   }
   .card-info {
-    padding-top: 10px;
-    text-align: center;
+    flex: 0 0 170px;
+    padding: 1rem;
+    background: #fff;
   }
   h2 {
     color: $text-color;
     font-size: 1rem;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     font-family: $base-font-family;
     font-weight: $base-font-weight
+  }
+  p {
+    font-size: 0.75rem;
+    // text-transform: uppercase;
+    margin-bottom: 0;
+    text-align: center;
+  }
+}
+
+#theoriginals, #theoneoffs, #thecollabs {
+  padding: 3rem 0;
+  @include for-tablet-portrait-up {
+    padding: 5rem 0;
+  };
+  @include for-tablet-portrait-up {
+    padding: 8rem 0;
+  };
+}
+
+
+#theoriginals {
+  background-color: #fff;
+  background: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.85)), url('/assets/img/bgs/bg1.jpeg');
+  background-size: cover;
+}
+#originals-list-1 {
+  li:nth-child(2) > a {
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    img {
+      margin-right: 0;
+      margin-left: 10px;
+    }
+  }
+  li:nth-child(3) > a {
+    align-items: flex-start;
   }
 }
 
 #theoneoffs {
   background: #e5e1f1;
 }
-.foundation-collection {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  li {
-    flex: 0 1 100%;
-    border-radius: 2px;
-    margin-bottom: 2rem;
-    @include for-tablet-portrait-up {
-      flex: 0 1 48%;
-    };
-  }
-  h2 {
-    color: $text-color;
-    font-size: 1rem;
-    margin-bottom: 0;
-    font-family: $base-font-family;
-    font-weight: $base-font-weight
-  }
+
+#thecollabs {
+  background: #C4EFF6;
 }
