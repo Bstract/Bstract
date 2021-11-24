@@ -159,7 +159,7 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 .works-list a { display: flex; align-items: flex-end; justify-content: flex-start; text-decoration: none; flex-wrap: wrap; }
 
-@media (min-width: 900px) { .works-list a { justify-content: space-between; } }
+@media (min-width: 900px) { .works-list a { justify-content: space-between; flex-wrap: nowrap; } }
 
 .works-list .img-wrapper { max-width: 448px; flex: 0 0 100%; margin: 0 10px 0 0; }
 

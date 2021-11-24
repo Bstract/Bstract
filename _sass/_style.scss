@@ -191,6 +191,7 @@
     flex-wrap: wrap;
     @include for-tablet-landscape-up {
       justify-content: space-between;
+      flex-wrap: nowrap;
     };
   }
   .img-wrapper {
@@ -326,7 +327,6 @@
     padding: 8rem 0;
   };
 }
-
 
 #theoriginals {
   background-color: #fff;
