@@ -3,4 +3,10 @@
 // =======================================
 .site-footer {
   border-top: $border;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+  p {
+    margin: 1rem auto;
+  }
 }
