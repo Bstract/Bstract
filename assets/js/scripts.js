@@ -5,40 +5,44 @@ jQuery(document).ready(function($){
   };
 
   // Production
-  // fetch('https://api.opensea.io/api/v1/assets?order_direction=desc&offset=0&limit=10&collection=ice-dance-1', options)
+  // fetch('https://api.opensea.io/api/v1/assets?order_direction=desc&offset=2&limit=10&collection=ice-dance-1', options)
   fetch('/assets/js/dev.json', options)
     .then(response => response.json())
     .then(response => $.each(response.assets, function(i, item) {
         if ( i < 3) {
-          $('#originals-list-1').append(
-            '<li>' +
-              '<a href="' + item.permalink + '" target="_blank">' +
-                '<div class="img-wrapper">' +
-                  '<img src="' + item.image_url + '" alt="@Bstract artwork on OpenSea" />' +
-                '</div>' +
-                '<div class="card-info card-info-sticky">' +
-                  '<h2>' + item.name + '</h2>' +
-                  '<p>Available on OpenSea</p>' +
-                '</div>' +
+          $('#originals-gallery-1').append(
+            '<div class="labelled-frame left-labelled">' +
+              '<a class="frame-label" href="' + item.permalink + '">' +
+                '<h2>' + item.name + '</h2>' +
+                '<p>Available on OpenSea</p>' +
               '</a>' +
-            '</li>'
+              '<div class="picture-frame">' +
+                '<div class="frame-border">' +
+                  '<div class="mat-board">' +
+                    '<img class="framed-image" src="' + item.image_url + '" alt="@Bstract artwork on OpenSea" />' +
+                  '</div>' +
+                '</div>' +
+              '</div>' +
+            '</div>'
           );
         } else {
-          $('#originals-list-2').append(
-            '<li>' +
-              '<a href="' + item.permalink + '" target="_blank">' +
-                '<div class="img-wrapper">' +
-                  '<img src="' + item.image_url + '" alt="@Bstract artwork on OpenSea" />' +
-                '</div>' +
-                '<div class="card-info">' +
-                  '<h2>' + item.name + '</h2>' +
-                  '<p>Available on OpenSea</p>' +
-                '</div>' +
+          $('#originals-gallery-2').append(
+            '<div class="labelled-frame bottom-labelled">' +
+              '<a class="frame-label" href="' + item.permalink + '">' +
+                '<h2>' + item.name + '</h2>' +
+                '<p>Available on OpenSea</p>' +
               '</a>' +
-            '</li>'
+              '<div class="picture-frame">' +
+                '<div class="frame-border">' +
+                  '<div class="mat-board">' +
+                    '<img class="framed-image" src="' + item.image_url + '" alt="@Bstract artwork on OpenSea" />' +
+                  '</div>' +
+                '</div>' +
+              '</div>' +
+            '</div>'
           );
           // Limit number of pieces listed
-          return i<9;
+          return i<11;
         }
 
 
