@@ -102,9 +102,6 @@
   @include for-tablet-portrait-up {
     padding: 5rem 0;
   };
-  @include for-tablet-portrait-up {
-    padding: 8rem 0;
-  };
 }
 
 #theoriginals, #foundationcollection {
@@ -112,8 +109,23 @@
 }
 
 #abouttheartist {
+  padding: 8rem 0 20rem;
   background: #0a2540;
   color: #adbdcc;
+  background: linear-gradient(180deg, #080c04 55%, transparent), url("/assets/img/portrait.jpeg");
+  background-position: bottom;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  @include for-tablet-portrait-up {
+    padding-bottom: 30rem;
+  };
+  @include for-tablet-landscape-up {
+    padding-bottom: 8rem;
+    background: linear-gradient(90deg, #080c04 45%, transparent), url("/assets/img/portrait.jpeg");
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+  };
   h2 {
     color: #fff;
   }

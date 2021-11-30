@@ -81,9 +81,7 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 @media (min-width: 900px) { .container { padding: 0 1.5rem; } }
 
-.button-block { margin-top: 1rem; margin-bottom: 1rem; }
-
-@media (min-width: 650px) { .button-block { margin-top: 2rem; margin-bottom: 2rem; } }
+.button-block { margin-top: 2rem; margin-bottom: 2rem; }
 
 .button { color: #444340; text-decoration: none; background: #e6e2f1; padding: 5px 8px; border: 1px solid #e6e2f1; border-radius: 4px; }
 
@@ -111,11 +109,13 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 .picture-frame .framed-image { margin: 0; }
 
-.labelled-frame { display: flex; align-items: flex-start; margin-bottom: 2rem; }
+.labelled-frame { display: flex; align-items: flex-start; flex-direction: column-reverse; margin-bottom: 2rem; }
+
+@media (min-width: 650px) { .labelled-frame { flex-direction: row; } }
 
 .labelled-frame .picture-frame { margin-bottom: 0; }
 
-.frame-label { flex: 0 0 170px; padding: 1rem; background: #fff; display: block; text-decoration: none; border: 1px solid #f3f3f3; border-bottom-color: #e7e7e7; }
+.frame-label { padding: 1rem; background: #fff; display: block; text-decoration: none; border: 1px solid #f3f3f3; border-bottom-color: #e7e7e7; flex: 0 0 auto; margin: 1.2rem auto 0; text-align: center; }
 
 .frame-label:hover { border-color: #000; }
 
@@ -123,21 +123,27 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 .frame-label p, .frame-label blockquote { font-size: 0.75rem; margin-bottom: 0; text-align: center; }
 
-.left-labelled .frame-label { margin-right: 10px; position: sticky; top: 60px; }
+@media (min-width: 650px) { .left-labelled .frame-label { flex: 0 0 170px; margin-top: 0; margin-right: 10px; position: sticky; top: 60px; } }
 
 .bottom-labelled { justify-content: flex-start; flex-direction: column-reverse; }
 
-.bottom-labelled .frame-label { flex: 0 0 auto; margin: 1.2rem auto 0; text-align: center; }
-
 .bottom-labelled .frame-label h2 { font-size: 1rem; }
 
-.collaboration { display: flex; align-items: flex-start; gap: 2rem; margin-bottom: 4rem; }
+.collaboration { display: flex; align-items: flex-start; flex-wrap: wrap; gap: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #cdcdcd; margin-bottom: 2rem; }
 
-@media (min-width: 650px) { .collaboration { gap: 4rem; } }
+.collaboration:last-child { border-bottom: none; }
 
-.collaboration .collaboration-intro { position: sticky; top: 80px; }
+@media (min-width: 650px) { .collaboration { flex-wrap: nowrap; gap: 4rem; margin-bottom: 4rem; } }
 
-.collaboration .collaboration-images { max-width: 50%; }
+.collaboration .collaboration-intro { flex: 0 0 100%; }
+
+@media (min-width: 650px) { .collaboration .collaboration-intro { flex: 0 1 50%; position: sticky; top: 80px; } }
+
+.collaboration .collaboration-images { max-width: 100%; }
+
+@media (min-width: 650px) { .collaboration .collaboration-images { max-width: 50%; } }
+
+@media (min-width: 900px) { .collaboration .collaboration-images { max-width: 55%; } }
 
 @media (min-width: 650px) { .collaboration-alternate { flex-direction: row-reverse; } }
 
@@ -191,11 +197,13 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 @media (min-width: 650px) { #theoriginals, #theoneoffs, #thecollabs { padding: 5rem 0; } }
 
-@media (min-width: 650px) { #theoriginals, #theoneoffs, #thecollabs { padding: 8rem 0; } }
-
 #theoriginals, #foundationcollection { background-color: #f6f9fc; }
 
-#abouttheartist { background: #0a2540; color: #adbdcc; }
+#abouttheartist { padding: 8rem 0 20rem; background: #0a2540; color: #adbdcc; background: linear-gradient(180deg, #080c04 55%, transparent), url("/assets/img/portrait.jpeg"); background-position: bottom; background-size: 100%; background-repeat: no-repeat; }
+
+@media (min-width: 650px) { #abouttheartist { padding-bottom: 30rem; } }
+
+@media (min-width: 900px) { #abouttheartist { padding-bottom: 8rem; background: linear-gradient(90deg, #080c04 45%, transparent), url("/assets/img/portrait.jpeg"); background-position: right; background-size: contain; background-repeat: no-repeat; } }
 
 #abouttheartist h2 { color: #fff; }
 
@@ -245,19 +253,21 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 @media (min-width: 900px) { .nav-container { flex-wrap: nowrap; } }
 
-.menu-open { max-height: 500px; }
+.menu-open { max-height: 600px; }
 
-.header-links { text-align: right; padding: 0 2rem 0 1rem; flex: 0 0 100%; border-bottom: 1px solid #fff; }
+.header-links { font-size: 0.875rem; text-align: right; padding: 0 2rem 0 1rem; flex: 0 0 100%; border-bottom: 1px solid #fff; }
+
+@media (min-width: 650px) { .header-links { font-size: 1rem; } }
 
 .header-links ul { list-style-type: none; padding: 1rem 0; }
 
-@media (min-width: 900px) { .header-links ul { display: flex; align-items: flex-end; justify-content: space-between; } }
+@media (min-width: 650px) { .header-links ul { display: flex; align-items: center; gap: 3rem; justify-content: flex-end; } }
+
+@media (min-width: 650px) { .header-links .links-self { border-right: 1px solid #000; padding-right: 4.5rem; } }
 
 .header-links li { margin-bottom: 0; margin-left: 0.5rem; }
 
 .header-links a { display: block; text-decoration: none; padding: 1rem 0 1rem 1rem; }
-
-@media (min-width: 900px) { .header-links a { padding: 5px; } }
 
 .header-links i { font-size: 1.25rem; }
 
