@@ -193,9 +193,9 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 @media (min-width: 900px) { .collection-gallery .labelled-frame { flex: 0 1 31%; } }
 
-#theoriginals, #theoneoffs, #thecollabs { padding: 3rem 0; }
+#theoriginals, #foundationcollection, #thecollabs { padding: 3rem 0; }
 
-@media (min-width: 650px) { #theoriginals, #theoneoffs, #thecollabs { padding: 5rem 0; } }
+@media (min-width: 650px) { #theoriginals, #foundationcollection, #thecollabs { padding: 5rem 0; } }
 
 #theoriginals, #foundationcollection { background-color: #f6f9fc; }
 
