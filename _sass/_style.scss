@@ -1,15 +1,15 @@
 .hero {
   text-align: center;
-  padding: 0 0 3rem 0;
-  background: linear-gradient(to bottom, #faf4f2, #f5f7f6);
-  border-bottom: $border;
+  background-color: #0b0b0b;
+  padding: 0.5rem 0 0;
   h1 {
+    color: #faf4f2;
     font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: -1px;
     line-height: 1.2;
     width: 100%;
-    margin-bottom: 1em;
+    margin-bottom: 0;
     @include for-tablet-portrait-up {
       font-size: 3.25rem;
     };
@@ -21,6 +21,17 @@
       };
     }
   }
+  .main-image {
+    max-width: 55%;
+  }
+}
+.payntchronicles {
+  text-align: center;
+  background: linear-gradient(to bottom, #faf4f2, #f5f7f6);
+  border-bottom: $border;
+  padding: 3rem 0;
+}
+.hero, .payntchronicles {
   .gallery {
     padding: 0 10px;
     margin-bottom: 2rem;
@@ -50,7 +61,6 @@
     padding: 10px 10px 10px 18px;
   }
 }
-
 .collection {
   display: flex;
   flex-wrap: wrap;
@@ -195,4 +205,25 @@
       margin-bottom: 0;
     }
   }
+}
+
+
+// Paynt Chronicles page
+
+.payntchronicles-intro {
+  @extend .hero;
+  padding-bottom: 2rem;
+  h1 {
+    margin-bottom: 1em;
+  }
+  p {
+    color: #bbb;
+  }
+}
+
+
+// Roadmap page
+
+.roadmap-hero {
+  padding: 2rem 0 7rem;
 }

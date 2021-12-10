@@ -165,7 +165,7 @@
   }
 }
 
-.collaboration {
+.offset-flex {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
@@ -181,7 +181,7 @@
     gap: 4rem;
     margin-bottom: 4rem;
   };
-  .collaboration-intro {
+  .offset-flex-intro {
     flex: 0 0 100%;
     @include for-tablet-portrait-up {
       flex: 0 1 50%;
@@ -189,7 +189,7 @@
       top: 80px;
     };
   }
-  .collaboration-images {
+  .offset-flex-images {
     max-width: 100%;
     @include for-tablet-portrait-up {
       max-width: 50%;
@@ -199,7 +199,7 @@
     };
   }
 }
-.collaboration-alternate {
+.offset-flex-alternate {
   @include for-tablet-portrait-up {
     flex-direction: row-reverse;
   };
