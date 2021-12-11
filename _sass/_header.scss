@@ -11,7 +11,7 @@
 .brand {
   flex: 0 0 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   padding: 1.5rem 1rem;
   @include for-tablet-landscape-up {
@@ -58,7 +58,7 @@
 .menu-open {
   max-height: 600px;
 }
-.header-links {
+.all-links {
   font-size: 0.875rem;
   text-align: right;
   padding: 0 2rem 0 1rem;
@@ -73,10 +73,12 @@
     @include for-tablet-portrait-up {
       display: flex;
       align-items: center;
-      gap: 3rem;
       justify-content: flex-end;
       padding-bottom: 2rem;
     };
+  }
+  .links-self, .links-blank {
+    flex: 0 1 300px;
   }
   .links-self {
     @include for-tablet-portrait-up {
@@ -87,6 +89,7 @@
   .links-blank {
     @include for-tablet-portrait-up {
       text-align: left;
+      padding-left: 3rem;
       padding-right: 2rem;
     };
   }
@@ -106,7 +109,6 @@
   }
   i {
     font-size: 1.25rem;
-    color: #faf4f2;
   }
   .icon-wrapper {
     display: inline-block;

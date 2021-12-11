@@ -5,8 +5,30 @@
   border-top: $border;
   padding-top: 4rem;
   padding-bottom: 4rem;
-  text-align: center;
+  .footer-brand, .nav-container, .final-word {
+      margin: 0 auto 2rem;
+  }
+  .footer-brand {
+    min-width: 100px;
+    max-width: 150px;
+  }
   p {
     margin: 1rem auto;
+  }
+  .nav-container {
+    max-height: 600px;
+  }
+  .all-links {
+    border-bottom: none;
+  }
+  .all-links ul {
+    justify-content: center;
+  }
+  .all-links a {
+    color: $text-color;
+  }
+  .final-word {
+    margin-top: 4rem;
+    text-align: center;
   }
 }

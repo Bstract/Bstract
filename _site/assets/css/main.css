@@ -81,6 +81,8 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 @media (min-width: 900px) { .container { padding: 0 1.5rem; } }
 
+.subheading { text-transform: uppercase; font-size: 0.875rem; letter-spacing: 1px; margin-bottom: 0; }
+
 .button-block { margin-top: 2rem; margin-bottom: 2rem; }
 
 .button { color: #444340; text-decoration: none; background: #e6e2f1; padding: 5px 8px; border: 1px solid #e6e2f1; border-radius: 4px; }
@@ -183,8 +185,6 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 .collection .collection-intro { position: sticky; top: 5rem; padding-bottom: 1rem; }
 
-.collection .collection-intro .subheading { text-transform: uppercase; font-size: 0.875rem; letter-spacing: 1px; margin-bottom: 0; }
-
 .collection .collection-featured-content { flex: 0 0 100%; }
 
 @media (min-width: 900px) { .collection .collection-featured-content { flex: 0 1 62%; padding-left: 5rem; } }
@@ -203,11 +203,11 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 #theoriginals, #foundationcollection { background-color: #f6f9fc; }
 
-#abouttheartist { padding: 8rem 0 20rem; background: #0a2540; color: #adbdcc; background: linear-gradient(180deg, #080c04 55%, transparent), url("/assets/img/portrait.jpeg"); background-position: bottom; background-size: 100%; background-repeat: no-repeat; }
+#abouttheartist { padding: 8rem 0 20rem; background: #0a2540; color: #adbdcc; background: linear-gradient(180deg, #080c04 55%, transparent), url("/assets/img/portrait2crop.jpeg"); background-position: bottom; background-size: 100%; background-repeat: no-repeat; }
 
 @media (min-width: 650px) { #abouttheartist { padding-bottom: 30rem; } }
 
-@media (min-width: 900px) { #abouttheartist { padding-bottom: 8rem; background: linear-gradient(90deg, #080c04 45%, transparent), url("/assets/img/portrait.jpeg"); background-position: right; background-size: contain; background-repeat: no-repeat; } }
+@media (min-width: 900px) { #abouttheartist { padding-bottom: 8rem; background: linear-gradient(90deg, #080c04 55%, transparent), url("/assets/img/portrait2crop.jpeg"); background-position: right; background-size: contain; background-repeat: no-repeat; } }
 
 #abouttheartist h2 { color: #fff; }
 
@@ -249,7 +249,7 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 .site-header { position: relative; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; background: #080c04; color: #faf4f2; }
 
-.brand { flex: 0 0 100%; display: flex; align-items: center; justify-content: space-between; padding: 1.5rem 1rem; }
+.brand { flex: 0 0 100%; display: flex; align-items: flex-start; justify-content: space-between; padding: 1.5rem 1rem; }
 
 @media (min-width: 900px) { .brand { padding: 1.5rem; } }
 
@@ -265,31 +265,33 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 .menu-open { max-height: 600px; }
 
-.header-links { font-size: 0.875rem; text-align: right; padding: 0 2rem 0 1rem; flex: 0 0 100%; border-bottom: 1px solid #fff; }
+.all-links { font-size: 0.875rem; text-align: right; padding: 0 2rem 0 1rem; flex: 0 0 100%; border-bottom: 1px solid #fff; }
 
-@media (min-width: 650px) { .header-links { font-size: 1rem; } }
+@media (min-width: 650px) { .all-links { font-size: 1rem; } }
 
-.header-links ul { list-style-type: none; padding: 1rem 0; }
+.all-links ul { list-style-type: none; padding: 1rem 0; }
 
-@media (min-width: 650px) { .header-links ul { display: flex; align-items: center; gap: 3rem; justify-content: flex-end; padding-bottom: 2rem; } }
+@media (min-width: 650px) { .all-links ul { display: flex; align-items: center; justify-content: flex-end; padding-bottom: 2rem; } }
 
-@media (min-width: 650px) { .header-links .links-self { border-right: 1px solid #e7e7e7; padding-right: 4.5rem; } }
+.all-links .links-self, .all-links .links-blank { flex: 0 1 300px; }
 
-@media (min-width: 650px) { .header-links .links-blank { text-align: left; padding-right: 2rem; } }
+@media (min-width: 650px) { .all-links .links-self { border-right: 1px solid #e7e7e7; padding-right: 4.5rem; } }
 
-.header-links li { margin-bottom: 0; margin-left: 0.5rem; }
+@media (min-width: 650px) { .all-links .links-blank { text-align: left; padding-left: 3rem; padding-right: 2rem; } }
 
-.header-links a { display: block; color: #faf4f2; text-decoration: none; padding: 1rem 0 1rem 1rem; }
+.all-links li { margin-bottom: 0; margin-left: 0.5rem; }
 
-.header-links a:hover { color: #fff; text-decoration: underline; }
+.all-links a { display: block; color: #faf4f2; text-decoration: none; padding: 1rem 0 1rem 1rem; }
 
-.header-links i { font-size: 1.25rem; color: #faf4f2; }
+.all-links a:hover { color: #fff; text-decoration: underline; }
 
-.header-links .icon-wrapper { display: inline-block; width: 3rem; text-align: center; }
+.all-links i { font-size: 1.25rem; }
 
-@media (min-width: 900px) { .header-links .icon-wrapper { width: auto; } }
+.all-links .icon-wrapper { display: inline-block; width: 3rem; text-align: center; }
 
-@media (min-width: 900px) { .header-links .mobile-nav-label { display: none; } }
+@media (min-width: 900px) { .all-links .icon-wrapper { width: auto; } }
+
+@media (min-width: 900px) { .all-links .mobile-nav-label { display: none; } }
 
 .hamburger { padding: 0 5px; display: block; cursor: pointer; transition-property: opacity, filter; transition-duration: 0.15s; transition-timing-function: linear; font: inherit; color: #faf4f2; text-transform: none; background-color: transparent; border: 0; margin-left: 10px; overflow: visible; }
 
@@ -325,8 +327,22 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 .hamburger--spin.is-active .hamburger-inner::after { bottom: 0; transform: rotate(-90deg); transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
-.site-footer { border-top: 1px solid #e7e7e7; padding-top: 4rem; padding-bottom: 4rem; text-align: center; }
+.site-footer { border-top: 1px solid #e7e7e7; padding-top: 4rem; padding-bottom: 4rem; }
+
+.site-footer .footer-brand, .site-footer .nav-container, .site-footer .final-word { margin: 0 auto 2rem; }
+
+.site-footer .footer-brand { min-width: 100px; max-width: 150px; }
 
 .site-footer p, .site-footer blockquote { margin: 1rem auto; }
+
+.site-footer .nav-container { max-height: 600px; }
+
+.site-footer .all-links { border-bottom: none; }
+
+.site-footer .all-links ul { justify-content: center; }
+
+.site-footer .all-links a { color: #444340; }
+
+.site-footer .final-word { margin-top: 4rem; text-align: center; }
 
 /*# sourceMappingURL=main.css.map */
