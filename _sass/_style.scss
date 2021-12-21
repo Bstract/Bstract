@@ -22,7 +22,13 @@
     }
   }
   .main-image {
-    max-width: 55%;
+    max-width: 95%;
+    @include for-tablet-portrait-up {
+      max-width: 75%;
+    };
+    @include for-tablet-landscape-up {
+      max-width: 55%;
+    };
   }
 }
 .payntchronicles {
@@ -113,22 +119,11 @@
 }
 
 #abouttheartist {
-  padding: 8rem 0 20rem;
-  background: #0a2540;
+  padding: 5rem 0;
+  background: #080c04;
   color: #adbdcc;
-  background: linear-gradient(180deg, #080c04 55%, transparent), url("/assets/img/portrait2crop.jpeg");
-  background-position: bottom;
-  background-size: 100%;
-  background-repeat: no-repeat;
   @include for-tablet-portrait-up {
-    padding-bottom: 30rem;
-  };
-  @include for-tablet-landscape-up {
-    padding-bottom: 8rem;
-    background: linear-gradient(90deg, #080c04 55%, transparent), url("/assets/img/portrait2crop.jpeg");
-    background-position: right;
-    background-size: contain;
-    background-repeat: no-repeat;
+    padding: 8rem 0;
   };
   h2 {
     color: #fff;
@@ -197,6 +192,10 @@
     };
     p {
       margin-bottom: 0;
+    }
+    a {
+      color: #fff;
+      text-decoration: underline;
     }
   }
 }

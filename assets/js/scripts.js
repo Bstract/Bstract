@@ -56,13 +56,4 @@ jQuery(document).ready(function($){
     $('.nav-container').toggleClass("menu-open");
   });
 
-  // Smoooooth scrolling
-  $('.smooth-scroll').on("click", function(){
-    $('html, body').animate({
-      scrollTop: $($(this).attr('href')).offset().top
-    }, 1000);
-    return false;
-  });
-
-
 });
