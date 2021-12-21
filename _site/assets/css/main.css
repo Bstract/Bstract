@@ -5,7 +5,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figu
 
 html, body { font-size: 16px; min-height: 95vh; }
 
-html { position: relative; }
+html { position: relative; scroll-behavior: smooth; }
 
 body { font-family: "Inter", -apple-system, Helvetica, Arial, sans-serif, apple color emoji; font-weight: normal; color: #444340; background-color: #131513; -webkit-text-size-adjust: 100%; -webkit-font-feature-settings: "kern" 1; -moz-font-feature-settings: "kern" 1; -o-font-feature-settings: "kern" 1; font-feature-settings: "kern" 1; font-kerning: normal; }
 
@@ -159,7 +159,11 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 @media (min-width: 650px) { .hero h1 span, .payntchronicles-intro h1 span { font-size: 2rem; } }
 
-.hero .main-image, .payntchronicles-intro .main-image { max-width: 55%; }
+.hero .main-image, .payntchronicles-intro .main-image { max-width: 95%; }
+
+@media (min-width: 650px) { .hero .main-image, .payntchronicles-intro .main-image { max-width: 75%; } }
+
+@media (min-width: 900px) { .hero .main-image, .payntchronicles-intro .main-image { max-width: 55%; } }
 
 .payntchronicles { text-align: center; background: linear-gradient(to bottom, #faf4f2, #f5f7f6); border-bottom: 1px solid #e7e7e7; padding: 3rem 0; }
 
@@ -203,11 +207,9 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 #theoriginals, #foundationcollection { background-color: #f6f9fc; }
 
-#abouttheartist { padding: 8rem 0 20rem; background: #0a2540; color: #adbdcc; background: linear-gradient(180deg, #080c04 55%, transparent), url("/assets/img/portrait2crop.jpeg"); background-position: bottom; background-size: 100%; background-repeat: no-repeat; }
+#abouttheartist { padding: 5rem 0; background: #080c04; color: #adbdcc; }
 
-@media (min-width: 650px) { #abouttheartist { padding-bottom: 30rem; } }
-
-@media (min-width: 900px) { #abouttheartist { padding-bottom: 8rem; background: linear-gradient(90deg, #080c04 55%, transparent), url("/assets/img/portrait2crop.jpeg"); background-position: right; background-size: contain; background-repeat: no-repeat; } }
+@media (min-width: 650px) { #abouttheartist { padding: 8rem 0; } }
 
 #abouttheartist h2 { color: #fff; }
 
@@ -239,6 +241,8 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 .aerial-callout .aerial-content p, .aerial-callout .aerial-content blockquote { margin-bottom: 0; }
 
+.aerial-callout .aerial-content a { color: #fff; text-decoration: underline; }
+
 .payntchronicles-intro { padding-bottom: 2rem; }
 
 .payntchronicles-intro h1 { margin-bottom: 1em; }
@@ -249,13 +253,13 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 .site-header { position: relative; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; background: #080c04; color: #faf4f2; }
 
-.brand { flex: 0 0 100%; display: flex; align-items: flex-start; justify-content: space-between; padding: 1.5rem 1rem; }
+.brand { flex: 0 0 100%; display: flex; align-items: flex-start; justify-content: space-between; padding: 1.5rem 10px; }
 
 @media (min-width: 900px) { .brand { padding: 1.5rem; } }
 
 .brand img { position: absolute; max-width: 150px; margin: 0; }
 
-.brand .menu-toggle { display: flex; align-items: center; background: transparent; border: 1px solid transparent; font-family: "Inter", -apple-system, Helvetica, Arial, sans-serif, apple color emoji; font-size: 1rem; color: #faf4f2; }
+.brand .menu-toggle { display: flex; align-items: center; background: transparent; border: 1px solid transparent; font-family: "Inter", -apple-system, Helvetica, Arial, sans-serif, apple color emoji; font-size: 1rem; color: #faf4f2; padding-right: 0; }
 
 .brand .menu-toggle:hover { cursor: pointer; }
 
@@ -273,7 +277,7 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 @media (min-width: 650px) { .all-links ul { display: flex; align-items: center; justify-content: flex-end; padding-bottom: 2rem; } }
 
-.all-links .links-self, .all-links .links-blank { flex: 0 1 300px; }
+.all-links .links-self, .all-links .links-blank { flex: 0 1 auto; min-width: 300px; }
 
 @media (min-width: 650px) { .all-links .links-self { border-right: 1px solid #e7e7e7; padding-right: 4.5rem; } }
 

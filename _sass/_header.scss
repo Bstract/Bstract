@@ -13,7 +13,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 10px;
   @include for-tablet-landscape-up {
     // flex: 0 1 33%;
     padding: 1.5rem;
@@ -34,6 +34,7 @@
     font-family: $base-font-family;
     font-size: 1rem;
     color: #faf4f2;
+    padding-right: 0;
     &:hover {
       cursor: pointer;
     }
@@ -78,7 +79,8 @@
     };
   }
   .links-self, .links-blank {
-    flex: 0 1 300px;
+    flex: 0 1 auto;
+    min-width: 300px;
   }
   .links-self {
     @include for-tablet-portrait-up {
